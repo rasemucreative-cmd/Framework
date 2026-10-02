@@ -1,0 +1,91 @@
+\doxysection{Framework/\+02\+\_\+\+Game\+Loop/\+\+Game\+Loop.c ファイル}
+\hypertarget{_game_loop_8c}{}\label{_game_loop_8c}\index{Framework/02\_GameLoop/GameLoop.c@{Framework/02\_GameLoop/GameLoop.c}}
+
+
+ゲームの進行を管理する  
+
+
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$assert.\+h$>$}\newline
+{\ttfamily \+\#include "{}Game\+Loop.\+h"{}}\newline
+{\ttfamily \+\#include "{}../\+01\+\_\+\+Application/\+\+Application.\+h"{}}\newline
+\doxysubsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_game_loop_8c_a16fae9dd0b73150b7908e3154555089e}{FRAMECOUNT\+\_\+\+MAX}}~(5000)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{_game_loop_8c_a03aede8ff91764482bb5e9accfae9b4f}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em このフレームワークで利用される\+Application以外の\+APIの初期化をする \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_game_loop_8c_a7f5781afb48be8ac7185bbe0219f385e}{game\+Loop}} (struct \doxymbox{\hyperlink{struct_application}{Application}} \texorpdfstring{$\ast$}{*}\+\_\+ptr\+Application)
+\begin{DoxyCompactList}\small\item\em ゲーム進行管理 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+ゲームの進行を管理する 
+
+\begin{DoxyAuthor}{著者}
+Rasemu\+Creative 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{バージョン}
+0.\+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{日付}
+2026-\/09-\/27
+\end{DoxyDate}
+\begin{DoxyCopyright}{著作権所有}
+Copyright (c) 2026 
+\end{DoxyCopyright}
+
+
+\label{_game_loop_8c_doc-define-members}
+\Hypertarget{_game_loop_8c_doc-define-members}
+\doxysubsection{マクロ定義詳解}
+\Hypertarget{_game_loop_8c_a16fae9dd0b73150b7908e3154555089e}\index{GameLoop.c@{GameLoop.c}!FRAMECOUNT\_MAX@{FRAMECOUNT\_MAX}}
+\index{FRAMECOUNT\_MAX@{FRAMECOUNT\_MAX}!GameLoop.c@{GameLoop.c}}
+\doxysubsubsection{\texorpdfstring{FRAMECOUNT\_MAX}{FRAMECOUNT\_MAX}}
+{\footnotesize\ttfamily \label{_game_loop_8c_a16fae9dd0b73150b7908e3154555089e} 
+\+\#define FRAMECOUNT\+\_\+\+MAX~(5000)}
+
+debug フレームをカウント (Game\+Loopが機能しているか確認) 
+
+\label{_game_loop_8c_doc-func-members}
+\Hypertarget{_game_loop_8c_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{_game_loop_8c_a7f5781afb48be8ac7185bbe0219f385e}\index{GameLoop.c@{GameLoop.c}!gameLoop@{gameLoop}}
+\index{gameLoop@{gameLoop}!GameLoop.c@{GameLoop.c}}
+\doxysubsubsection{\texorpdfstring{gameLoop()}{gameLoop()}}
+{\footnotesize\ttfamily \label{_game_loop_8c_a7f5781afb48be8ac7185bbe0219f385e} 
+void game\+Loop (\begin{DoxyParamCaption}\item[{struct \doxymbox{\hyperlink{struct_application}{Application}} \texorpdfstring{$\ast$}{*}}]{\+\_\+ptr\+Application}{}\end{DoxyParamCaption})}
+
+
+
+ゲーム進行管理 
+
+\begin{DoxyNote}{覚え書き}
+シーンの切り替え管理や\+Timerの通知を各シーンに行う
+\end{DoxyNote}
+
+\begin{DoxyParams}{引数}
+{\em \+\_\+ptr\+Application} & アプリケーション管理担当\\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{警告}
+\+\_\+ptr\+Application \texorpdfstring{$<$}{<}-- が\+NULLの場合assertで即終了するので注意 
+\end{DoxyWarning}
+\Hypertarget{_game_loop_8c_a03aede8ff91764482bb5e9accfae9b4f}\index{GameLoop.c@{GameLoop.c}!initialize@{initialize}}
+\index{initialize@{initialize}!GameLoop.c@{GameLoop.c}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \label{_game_loop_8c_a03aede8ff91764482bb5e9accfae9b4f} 
+int initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+このフレームワークで利用される\+Application以外の\+APIの初期化をする 
+
+\begin{DoxyReturn}{戻り値}
+(1:初期化成功/\+0:初期化失敗) 
+\end{DoxyReturn}

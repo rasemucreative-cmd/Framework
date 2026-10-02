@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Framework: Framework/03_Timer/Timer.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Framework
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_timer_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Timer.c ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>ゲーム内時間管理  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &lt;time.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;assert.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_timer_8h_source.html">Timer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_application_8h_source.html">../01_Application/Application.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:Timer" id="r_Timer"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_timer.html">Timer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲーム時間の管理用構造体  <a href="struct_timer.html#details">[詳解]</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a008bb6dcb37801b973567ededf69f41f" id="r_a008bb6dcb37801b973567ededf69f41f"><td class="memItemLeft"><a id="a008bb6dcb37801b973567ededf69f41f" name="a008bb6dcb37801b973567ededf69f41f"></a>
+void&#160;</td><td class="memItemRight"><b>initializeGameTimer</b> (<a class="el" href="_timer_8h.html#a1a42431170135eaa687921a4b959b07b">PtrGameTimer</a> _ptrTimer)</td></tr>
+<tr class="memitem:ace13e37376f0ffac2a10ad9ff5a06666" id="r_ace13e37376f0ffac2a10ad9ff5a06666"><td class="memItemLeft"><a class="el" href="_timer_8h.html#a1a42431170135eaa687921a4b959b07b">PtrGameTimer</a>&#160;</td><td class="memItemRight"><a class="el" href="#ace13e37376f0ffac2a10ad9ff5a06666">createGameTimer</a> ()</td></tr>
+<tr class="memdesc:ace13e37376f0ffac2a10ad9ff5a06666"><td class="mdescLeft">&#160;</td><td class="mdescRight">GameTimerを生成  <br /></td></tr>
+<tr class="memitem:acb19483998b5157c907fe4e8197ae263" id="r_acb19483998b5157c907fe4e8197ae263"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acb19483998b5157c907fe4e8197ae263">deleteGameTimer</a> (<a class="el" href="_timer_8h.html#adbe773776f7578d89b1dfde1be9f069d">WPtrGameTimer</a> _wptrTimer)</td></tr>
+<tr class="memdesc:acb19483998b5157c907fe4e8197ae263"><td class="mdescLeft">&#160;</td><td class="mdescRight">GameTimerを削除  <br /></td></tr>
+<tr class="memitem:add81d7861b4ae4225f440e7f91882966" id="r_add81d7861b4ae4225f440e7f91882966"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#add81d7861b4ae4225f440e7f91882966">updateTimer</a> (<a class="el" href="_timer_8h.html#a1a42431170135eaa687921a4b959b07b">PtrGameTimer</a> _ptrTimer)</td></tr>
+<tr class="memdesc:add81d7861b4ae4225f440e7f91882966"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイマーの更新  <br /></td></tr>
+<tr class="memitem:a1f54cfe8abece92a5b7eb3c622fc1fc7" id="r_a1f54cfe8abece92a5b7eb3c622fc1fc7"><td class="memItemLeft"><a id="a1f54cfe8abece92a5b7eb3c622fc1fc7" name="a1f54cfe8abece92a5b7eb3c622fc1fc7"></a>
+double&#160;</td><td class="memItemRight"><b>getFPSTimer</b> (const <a class="el" href="_timer_8h.html#a1a42431170135eaa687921a4b959b07b">PtrGameTimer</a>)</td></tr>
+<tr class="memitem:a628fce14d1a6bc356910740485b8ae39" id="r_a628fce14d1a6bc356910740485b8ae39"><td class="memItemLeft"><a id="a628fce14d1a6bc356910740485b8ae39" name="a628fce14d1a6bc356910740485b8ae39"></a>
+double&#160;</td><td class="memItemRight"><b>getFrameRate</b> (const <a class="el" href="_timer_8h.html#a1a42431170135eaa687921a4b959b07b">PtrGameTimer</a>)</td></tr>
+<tr class="memitem:a54286969dd85262cce0da518c23f06fd" id="r_a54286969dd85262cce0da518c23f06fd"><td class="memItemLeft"><a id="a54286969dd85262cce0da518c23f06fd" name="a54286969dd85262cce0da518c23f06fd"></a>
+double&#160;</td><td class="memItemRight"><b>getDeltaTime</b> (const <a class="el" href="_timer_8h.html#a1a42431170135eaa687921a4b959b07b">PtrGameTimer</a>)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>ゲーム内時間管理 </p>
+<dl class="section author"><dt>著者</dt><dd>Rasemu </dd></dl>
+<dl class="section version"><dt>バージョン</dt><dd>0.1.0 </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2026-09-28</dd></dl>
+<dl class="section copyright"><dt>著作権所有</dt><dd>Copyright (c) 2026 </dd></dl>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="ace13e37376f0ffac2a10ad9ff5a06666" name="ace13e37376f0ffac2a10ad9ff5a06666"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace13e37376f0ffac2a10ad9ff5a06666">&#9670;&#160;</a></span>createGameTimer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_timer_8h.html#a1a42431170135eaa687921a4b959b07b">PtrGameTimer</a> createGameTimer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GameTimerを生成 </p>
+<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="_timer_8h.html#a1a42431170135eaa687921a4b959b07b">PtrGameTimer</a> </dd></dl>
+
+</div>
+</div>
+<a id="acb19483998b5157c907fe4e8197ae263" name="acb19483998b5157c907fe4e8197ae263"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb19483998b5157c907fe4e8197ae263">&#9670;&#160;</a></span>deleteGameTimer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void deleteGameTimer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_timer_8h.html#adbe773776f7578d89b1dfde1be9f069d">WPtrGameTimer</a></td>          <td class="paramname"><span class="paramname"><em>_wptrTimer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GameTimerを削除 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">GameTimerの実体へのダブルポインタ</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="add81d7861b4ae4225f440e7f91882966" name="add81d7861b4ae4225f440e7f91882966"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add81d7861b4ae4225f440e7f91882966">&#9670;&#160;</a></span>updateTimer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void updateTimer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_timer_8h.html#a1a42431170135eaa687921a4b959b07b">PtrGameTimer</a></td>          <td class="paramname"><span class="paramname"><em>_ptrTimer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>タイマーの更新 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">GameTimerへのポインタ</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Framework</b></li><li class="navelem"><b>03_Timer</b></li><li class="navelem"><a href="_timer_8c.html">Timer.c</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

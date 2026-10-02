@@ -1,0 +1,162 @@
+\doxysection{Framework/\+03\+\_\+\+Timer/\+\+Timer.h ファイル}
+\hypertarget{_timer_8h}{}\label{_timer_8h}\index{Framework/03\_Timer/Timer.h@{Framework/03\_Timer/Timer.h}}
+
+
+ゲーム内時間管理  
+
+
+\doxysubsubsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \doxymbox{\hyperlink{struct_timer}{Timer}} \doxymbox{\hyperlink{_timer_8h_afcce2a66fb3a503ac6e3404d6a72a6dc}{Game\+Timer}}
+\item 
+typedef struct \doxymbox{\hyperlink{struct_timer}{Timer}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_timer_8h_a1a42431170135eaa687921a4b959b07b}{Ptr\+Game\+Timer}}
+\item 
+typedef struct \doxymbox{\hyperlink{struct_timer}{Timer}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_timer_8h_adbe773776f7578d89b1dfde1be9f069d}{WPtr\+Game\+Timer}}
+\end{DoxyCompactItemize}
+
+\doxysubsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_timer_8h_a1a42431170135eaa687921a4b959b07b}{Ptr\+Game\+Timer}} \doxymbox{\hyperlink{_timer_8h_ace13e37376f0ffac2a10ad9ff5a06666}{create\+Game\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Game\+Timerを生成 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_timer_8h_acfa4165ad77d0a4e5038ceca62c4c65a}{delete\+Game\+Timer}} (\doxymbox{\hyperlink{_timer_8h_adbe773776f7578d89b1dfde1be9f069d}{WPtr\+Game\+Timer}})
+\begin{DoxyCompactList}\small\item\em Game\+Timerを削除 \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_timer_8h_a13bd6db7d0eb35b5854966159f2b1078}{update\+Timer}} (\doxymbox{\hyperlink{_timer_8h_a1a42431170135eaa687921a4b959b07b}{Ptr\+Game\+Timer}})
+\begin{DoxyCompactList}\small\item\em タイマーの更新 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+double \doxymbox{\hyperlink{_timer_8h_a1f54cfe8abece92a5b7eb3c622fc1fc7}{get\+FPSTimer}} (const \doxymbox{\hyperlink{_timer_8h_a1a42431170135eaa687921a4b959b07b}{Ptr\+Game\+Timer}})
+\begin{DoxyCompactList}\small\item\em FPSを取得する \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{_timer_8h_a628fce14d1a6bc356910740485b8ae39}{get\+Frame\+Rate}} (const \doxymbox{\hyperlink{_timer_8h_a1a42431170135eaa687921a4b959b07b}{Ptr\+Game\+Timer}})
+\begin{DoxyCompactList}\small\item\em Frame\+Rateを取得する \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{_timer_8h_a54286969dd85262cce0da518c23f06fd}{get\+Delta\+Time}} (const \doxymbox{\hyperlink{_timer_8h_a1a42431170135eaa687921a4b959b07b}{Ptr\+Game\+Timer}})
+\begin{DoxyCompactList}\small\item\em Delta\+Timeを取得する \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+
+\doxysubsection{詳解}
+ゲーム内時間管理 
+
+\begin{DoxyAuthor}{著者}
+Rasemu 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{バージョン}
+0.\+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{日付}
+2026-\/09-\/28
+\end{DoxyDate}
+\begin{DoxyCopyright}{著作権所有}
+Copyright (c) 2026 
+\end{DoxyCopyright}
+
+
+\label{_timer_8h_doc-typedef-members}
+\Hypertarget{_timer_8h_doc-typedef-members}
+\doxysubsection{型定義詳解}
+\Hypertarget{_timer_8h_afcce2a66fb3a503ac6e3404d6a72a6dc}\index{Timer.h@{Timer.h}!GameTimer@{GameTimer}}
+\index{GameTimer@{GameTimer}!Timer.h@{Timer.h}}
+\doxysubsubsection{\texorpdfstring{GameTimer}{GameTimer}}
+{\footnotesize\ttfamily \label{_timer_8h_afcce2a66fb3a503ac6e3404d6a72a6dc} 
+typedef struct \doxymbox{\hyperlink{struct_timer}{Timer}} \doxymbox{\hyperlink{_timer_8h_afcce2a66fb3a503ac6e3404d6a72a6dc}{Game\+Timer}}}
+
+!\texorpdfstring{$<$}{<} タイマーの基本型 \Hypertarget{_timer_8h_a1a42431170135eaa687921a4b959b07b}\index{Timer.h@{Timer.h}!PtrGameTimer@{PtrGameTimer}}
+\index{PtrGameTimer@{PtrGameTimer}!Timer.h@{Timer.h}}
+\doxysubsubsection{\texorpdfstring{PtrGameTimer}{PtrGameTimer}}
+{\footnotesize\ttfamily \label{_timer_8h_a1a42431170135eaa687921a4b959b07b} 
+typedef struct \doxymbox{\hyperlink{struct_timer}{Timer}}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_timer_8h_a1a42431170135eaa687921a4b959b07b}{Ptr\+Game\+Timer}}}
+
+!\texorpdfstring{$<$}{<} Timerのエイリアス \Hypertarget{_timer_8h_adbe773776f7578d89b1dfde1be9f069d}\index{Timer.h@{Timer.h}!WPtrGameTimer@{WPtrGameTimer}}
+\index{WPtrGameTimer@{WPtrGameTimer}!Timer.h@{Timer.h}}
+\doxysubsubsection{\texorpdfstring{WPtrGameTimer}{WPtrGameTimer}}
+{\footnotesize\ttfamily \label{_timer_8h_adbe773776f7578d89b1dfde1be9f069d} 
+typedef struct \doxymbox{\hyperlink{struct_timer}{Timer}}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_timer_8h_adbe773776f7578d89b1dfde1be9f069d}{WPtr\+Game\+Timer}}}
+
+!\texorpdfstring{$<$}{<} Game\+Timerへのポインタ 
+
+\label{_timer_8h_doc-func-members}
+\Hypertarget{_timer_8h_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{_timer_8h_ace13e37376f0ffac2a10ad9ff5a06666}\index{Timer.h@{Timer.h}!createGameTimer@{createGameTimer}}
+\index{createGameTimer@{createGameTimer}!Timer.h@{Timer.h}}
+\doxysubsubsection{\texorpdfstring{createGameTimer()}{createGameTimer()}}
+{\footnotesize\ttfamily \label{_timer_8h_ace13e37376f0ffac2a10ad9ff5a06666} 
+\doxymbox{\hyperlink{_timer_8h_a1a42431170135eaa687921a4b959b07b}{Ptr\+Game\+Timer}} create\+Game\+Timer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Game\+Timerを生成 
+
+\begin{DoxyReturn}{戻り値}
+\doxylink{_timer_8h_a1a42431170135eaa687921a4b959b07b}{Ptr\+Game\+Timer} 
+\end{DoxyReturn}
+\Hypertarget{_timer_8h_acfa4165ad77d0a4e5038ceca62c4c65a}\index{Timer.h@{Timer.h}!deleteGameTimer@{deleteGameTimer}}
+\index{deleteGameTimer@{deleteGameTimer}!Timer.h@{Timer.h}}
+\doxysubsubsection{\texorpdfstring{deleteGameTimer()}{deleteGameTimer()}}
+{\footnotesize\ttfamily \label{_timer_8h_acfa4165ad77d0a4e5038ceca62c4c65a} 
+void delete\+Game\+Timer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_timer_8h_adbe773776f7578d89b1dfde1be9f069d}{WPtr\+Game\+Timer}}}]{\+\_\+wptr\+Timer}{}\end{DoxyParamCaption})}
+
+
+
+Game\+Timerを削除 
+
+
+\begin{DoxyParams}[1]{引数}
+\doxymbox{\texttt{in}}  & {\em Game\+Timerの実体へのダブルポインタ} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_timer_8h_a54286969dd85262cce0da518c23f06fd}\index{Timer.h@{Timer.h}!getDeltaTime@{getDeltaTime}}
+\index{getDeltaTime@{getDeltaTime}!Timer.h@{Timer.h}}
+\doxysubsubsection{\texorpdfstring{getDeltaTime()}{getDeltaTime()}}
+{\footnotesize\ttfamily \label{_timer_8h_a54286969dd85262cce0da518c23f06fd} 
+double get\+Delta\+Time (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{_timer_8h_a1a42431170135eaa687921a4b959b07b}{Ptr\+Game\+Timer}}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Delta\+Timeを取得する 
+
+\begin{DoxyReturn}{戻り値}
+double (Delta\+Time) 
+\end{DoxyReturn}
+\Hypertarget{_timer_8h_a1f54cfe8abece92a5b7eb3c622fc1fc7}\index{Timer.h@{Timer.h}!getFPSTimer@{getFPSTimer}}
+\index{getFPSTimer@{getFPSTimer}!Timer.h@{Timer.h}}
+\doxysubsubsection{\texorpdfstring{getFPSTimer()}{getFPSTimer()}}
+{\footnotesize\ttfamily \label{_timer_8h_a1f54cfe8abece92a5b7eb3c622fc1fc7} 
+double get\+FPSTimer (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{_timer_8h_a1a42431170135eaa687921a4b959b07b}{Ptr\+Game\+Timer}}}]{}{}\end{DoxyParamCaption})}
+
+
+
+FPSを取得する 
+
+\begin{DoxyReturn}{戻り値}
+double (FPS) 
+\end{DoxyReturn}
+\Hypertarget{_timer_8h_a628fce14d1a6bc356910740485b8ae39}\index{Timer.h@{Timer.h}!getFrameRate@{getFrameRate}}
+\index{getFrameRate@{getFrameRate}!Timer.h@{Timer.h}}
+\doxysubsubsection{\texorpdfstring{getFrameRate()}{getFrameRate()}}
+{\footnotesize\ttfamily \label{_timer_8h_a628fce14d1a6bc356910740485b8ae39} 
+double get\+Frame\+Rate (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{_timer_8h_a1a42431170135eaa687921a4b959b07b}{Ptr\+Game\+Timer}}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Frame\+Rateを取得する 
+
+\begin{DoxyReturn}{戻り値}
+double (Frame\+Rate) 
+\end{DoxyReturn}
+\Hypertarget{_timer_8h_a13bd6db7d0eb35b5854966159f2b1078}\index{Timer.h@{Timer.h}!updateTimer@{updateTimer}}
+\index{updateTimer@{updateTimer}!Timer.h@{Timer.h}}
+\doxysubsubsection{\texorpdfstring{updateTimer()}{updateTimer()}}
+{\footnotesize\ttfamily \label{_timer_8h_a13bd6db7d0eb35b5854966159f2b1078} 
+void update\+Timer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_timer_8h_a1a42431170135eaa687921a4b959b07b}{Ptr\+Game\+Timer}}}]{\+\_\+ptr\+Timer}{}\end{DoxyParamCaption})}
+
+
+
+タイマーの更新 
+
+
+\begin{DoxyParams}[1]{引数}
+\doxymbox{\texttt{in}}  & {\em Game\+Timerへのポインタ} & \\
+\hline
+\end{DoxyParams}

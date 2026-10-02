@@ -1,0 +1,30 @@
+\doxysection{Timer.\+h}
+\hypertarget{_timer_8h_source}{}\label{_timer_8h_source}\index{Framework/03\_Timer/Timer.h@{Framework/03\_Timer/Timer.h}}
+\doxymbox{\hyperlink{_timer_8h}{\+[詳解]}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ \_\_TIMER\_H\_\_}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ \_\_TIMER\_H\_\_}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_timer}{Timer}};\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_timer}{Timer}}\ \doxymbox{\hyperlink{_timer_8h_afcce2a66fb3a503ac6e3404d6a72a6dc}{GameTimer}};\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_timer}{Timer}}\ *\doxymbox{\hyperlink{_timer_8h_a1a42431170135eaa687921a4b959b07b}{PtrGameTimer}};}
+\DoxyCodeLine{00023\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_timer}{Timer}}\ **\doxymbox{\hyperlink{_timer_8h_adbe773776f7578d89b1dfde1be9f069d}{WPtrGameTimer}};\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ \doxymbox{\hyperlink{_timer_8h_a1a42431170135eaa687921a4b959b07b}{PtrGameTimer}}\ \doxymbox{\hyperlink{_timer_8c_ace13e37376f0ffac2a10ad9ff5a06666}{createGameTimer}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{_timer_8c_acb19483998b5157c907fe4e8197ae263}{deleteGameTimer}}(\doxymbox{\hyperlink{_timer_8h_adbe773776f7578d89b1dfde1be9f069d}{WPtrGameTimer}});}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{_timer_8c_add81d7861b4ae4225f440e7f91882966}{updateTimer}}(\doxymbox{\hyperlink{_timer_8h_a1a42431170135eaa687921a4b959b07b}{PtrGameTimer}});}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00056\ \textcolor{keywordtype}{double}\ getFPSTimer(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{_timer_8h_a1a42431170135eaa687921a4b959b07b}{PtrGameTimer}});}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00063\ \textcolor{keywordtype}{double}\ getFrameRate(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{_timer_8h_a1a42431170135eaa687921a4b959b07b}{PtrGameTimer}});}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \textcolor{keywordtype}{double}\ getDeltaTime(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{_timer_8h_a1a42431170135eaa687921a4b959b07b}{PtrGameTimer}});}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_TIMER\_H\_\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

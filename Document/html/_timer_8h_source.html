@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Framework: Framework/03_Timer/Timer.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Framework
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_timer_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Timer.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_timer_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef __TIMER_H__</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define __TIMER_H__</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">struct </span><a class="code hl_struct" href="struct_timer.html">Timer</a>; </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="_timer_8h.html#afcce2a66fb3a503ac6e3404d6a72a6dc">   21</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_timer.html">Timer</a> <a class="code hl_typedef" href="_timer_8h.html#afcce2a66fb3a503ac6e3404d6a72a6dc">GameTimer</a>; </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="_timer_8h.html#a1a42431170135eaa687921a4b959b07b">   22</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_timer.html">Timer</a> *<a class="code hl_typedef" href="_timer_8h.html#a1a42431170135eaa687921a4b959b07b">PtrGameTimer</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="_timer_8h.html#adbe773776f7578d89b1dfde1be9f069d">   23</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_timer.html">Timer</a> **<a class="code hl_typedef" href="_timer_8h.html#adbe773776f7578d89b1dfde1be9f069d">WPtrGameTimer</a>; </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><a class="code hl_typedef" href="_timer_8h.html#a1a42431170135eaa687921a4b959b07b">PtrGameTimer</a> <a class="code hl_function" href="_timer_8c.html#ace13e37376f0ffac2a10ad9ff5a06666">createGameTimer</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">void</span> <a class="code hl_function" href="_timer_8c.html#acb19483998b5157c907fe4e8197ae263">deleteGameTimer</a>(<a class="code hl_typedef" href="_timer_8h.html#adbe773776f7578d89b1dfde1be9f069d">WPtrGameTimer</a>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keywordtype">void</span> <a class="code hl_function" href="_timer_8c.html#add81d7861b4ae4225f440e7f91882966">updateTimer</a>(<a class="code hl_typedef" href="_timer_8h.html#a1a42431170135eaa687921a4b959b07b">PtrGameTimer</a>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="_timer_8h.html#a1f54cfe8abece92a5b7eb3c622fc1fc7">   56</a></span><span class="keywordtype">double</span> getFPSTimer(<span class="keyword">const</span> <a class="code hl_typedef" href="_timer_8h.html#a1a42431170135eaa687921a4b959b07b">PtrGameTimer</a>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="_timer_8h.html#a628fce14d1a6bc356910740485b8ae39">   63</a></span><span class="keywordtype">double</span> getFrameRate(<span class="keyword">const</span> <a class="code hl_typedef" href="_timer_8h.html#a1a42431170135eaa687921a4b959b07b">PtrGameTimer</a>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="_timer_8h.html#a54286969dd85262cce0da518c23f06fd">   70</a></span><span class="keywordtype">double</span> getDeltaTime(<span class="keyword">const</span> <a class="code hl_typedef" href="_timer_8h.html#a1a42431170135eaa687921a4b959b07b">PtrGameTimer</a>);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#endif </span><span class="comment">/* __TIMER_H__ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="a_timer_8c_html_acb19483998b5157c907fe4e8197ae263"><div class="ttname"><a href="_timer_8c.html#acb19483998b5157c907fe4e8197ae263">deleteGameTimer</a></div><div class="ttdeci">void deleteGameTimer(WPtrGameTimer _wptrTimer)</div><div class="ttdoc">GameTimerを削除</div><div class="ttdef"><b>定義</b> Timer.c:74</div></div>
+<div class="ttc" id="a_timer_8c_html_ace13e37376f0ffac2a10ad9ff5a06666"><div class="ttname"><a href="_timer_8c.html#ace13e37376f0ffac2a10ad9ff5a06666">createGameTimer</a></div><div class="ttdeci">PtrGameTimer createGameTimer()</div><div class="ttdoc">GameTimerを生成</div><div class="ttdef"><b>定義</b> Timer.c:65</div></div>
+<div class="ttc" id="a_timer_8c_html_add81d7861b4ae4225f440e7f91882966"><div class="ttname"><a href="_timer_8c.html#add81d7861b4ae4225f440e7f91882966">updateTimer</a></div><div class="ttdeci">void updateTimer(PtrGameTimer _ptrTimer)</div><div class="ttdoc">タイマーの更新</div><div class="ttdef"><b>定義</b> Timer.c:82</div></div>
+<div class="ttc" id="a_timer_8h_html_a1a42431170135eaa687921a4b959b07b"><div class="ttname"><a href="_timer_8h.html#a1a42431170135eaa687921a4b959b07b">PtrGameTimer</a></div><div class="ttdeci">struct Timer * PtrGameTimer</div><div class="ttdef"><b>定義</b> Timer.h:22</div></div>
+<div class="ttc" id="a_timer_8h_html_adbe773776f7578d89b1dfde1be9f069d"><div class="ttname"><a href="_timer_8h.html#adbe773776f7578d89b1dfde1be9f069d">WPtrGameTimer</a></div><div class="ttdeci">struct Timer ** WPtrGameTimer</div><div class="ttdef"><b>定義</b> Timer.h:23</div></div>
+<div class="ttc" id="a_timer_8h_html_afcce2a66fb3a503ac6e3404d6a72a6dc"><div class="ttname"><a href="_timer_8h.html#afcce2a66fb3a503ac6e3404d6a72a6dc">GameTimer</a></div><div class="ttdeci">struct Timer GameTimer</div><div class="ttdef"><b>定義</b> Timer.h:21</div></div>
+<div class="ttc" id="astruct_timer_html"><div class="ttname"><a href="struct_timer.html">Timer</a></div><div class="ttdoc">ゲーム時間の管理用構造体</div><div class="ttdef"><b>定義</b> Timer.c:25</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Framework</b></li><li class="navelem"><b>03_Timer</b></li><li class="navelem"><a href="_timer_8h.html">Timer.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

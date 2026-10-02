@@ -1,0 +1,17 @@
+{
+    "doxygen_runner.configuration_file_override":
+    "${workspaceFolder}/DoxyFile",
+    "doxygen_runner.configuration_filenames":[
+        "DoxyFile",
+        "doxygen.conf"
+    ],
+    "doxygen_runner.crawlet_package_root_marker_files":[
+        "package.xml",
+        "package.json",
+        "manifest.json",
+        "MANIFEST",
+        "MANIFEST.in",
+        "source.c",
+        "header.h"
+    ]
+}

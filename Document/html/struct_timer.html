@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Framework: Timer 構造体</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Framework
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="検索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_timer.html','','struct_timer-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Timer 構造体</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>ゲーム時間の管理用構造体  
+ <a href="#details">[詳解]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a1a391b2b02a45aa4220f8d466ae63237" id="r_a1a391b2b02a45aa4220f8d466ae63237"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a1a391b2b02a45aa4220f8d466ae63237">deltaTime</a></td></tr>
+<tr class="memitem:a5103133958f648833d91f18c109bfec0" id="r_a5103133958f648833d91f18c109bfec0"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a5103133958f648833d91f18c109bfec0">elapsedTime</a></td></tr>
+<tr class="memitem:af1abe36d7bfee6fb2b58252c97e91dab" id="r_af1abe36d7bfee6fb2b58252c97e91dab"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#af1abe36d7bfee6fb2b58252c97e91dab">fps</a></td></tr>
+<tr class="memitem:ac8d9ba85523d93a2d4820dda9353d972" id="r_ac8d9ba85523d93a2d4820dda9353d972"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#ac8d9ba85523d93a2d4820dda9353d972">frameRate</a></td></tr>
+<tr class="memitem:a2b866c4d3d96024593522c3f3faf4cdb" id="r_a2b866c4d3d96024593522c3f3faf4cdb"><td class="memItemLeft">unsigned long&#160;</td><td class="memItemRight"><a class="el" href="#a2b866c4d3d96024593522c3f3faf4cdb">frameCount</a></td></tr>
+<tr class="memitem:a751cd5f493eb73cab0d5b52fbdd83202" id="r_a751cd5f493eb73cab0d5b52fbdd83202"><td class="memItemLeft">clock_t&#160;</td><td class="memItemRight"><a class="el" href="#a751cd5f493eb73cab0d5b52fbdd83202">previousTime</a></td></tr>
+<tr class="memitem:a9d0d6a42b00374b79e1ba41777c6bd35" id="r_a9d0d6a42b00374b79e1ba41777c6bd35"><td class="memItemLeft">clock_t&#160;</td><td class="memItemRight"><a class="el" href="#a9d0d6a42b00374b79e1ba41777c6bd35">fpsTimer</a></td></tr>
+<tr class="memitem:a546f625b928a3f4f032c665d8e9b3e8f" id="r_a546f625b928a3f4f032c665d8e9b3e8f"><td class="memItemLeft">clock_t&#160;</td><td class="memItemRight"><a class="el" href="#a546f625b928a3f4f032c665d8e9b3e8f">fpsElapsed</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>ゲーム時間の管理用構造体 </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">メンバ詳解</h2>
+<a id="a1a391b2b02a45aa4220f8d466ae63237" name="a1a391b2b02a45aa4220f8d466ae63237"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a391b2b02a45aa4220f8d466ae63237">&#9670;&#160;</a></span>deltaTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Timer::deltaTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>直前のフレームから現在のフレームまでに経過した時間（秒）のこと </p>
+
+</div>
+</div>
+<a id="a5103133958f648833d91f18c109bfec0" name="a5103133958f648833d91f18c109bfec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5103133958f648833d91f18c109bfec0">&#9670;&#160;</a></span>elapsedTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Timer::elapsedTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>経過時間 </p>
+
+</div>
+</div>
+<a id="af1abe36d7bfee6fb2b58252c97e91dab" name="af1abe36d7bfee6fb2b58252c97e91dab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1abe36d7bfee6fb2b58252c97e91dab">&#9670;&#160;</a></span>fps</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Timer::fps</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>1フレーム/秒 </p>
+
+</div>
+</div>
+<a id="a546f625b928a3f4f032c665d8e9b3e8f" name="a546f625b928a3f4f032c665d8e9b3e8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a546f625b928a3f4f032c665d8e9b3e8f">&#9670;&#160;</a></span>fpsElapsed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">clock_t Timer::fpsElapsed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>「FPS（フレームレート）の計測や計算のために経過した時間」を保持する変数 </p>
+
+</div>
+</div>
+<a id="a9d0d6a42b00374b79e1ba41777c6bd35" name="a9d0d6a42b00374b79e1ba41777c6bd35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d0d6a42b00374b79e1ba41777c6bd35">&#9670;&#160;</a></span>fpsTimer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">clock_t Timer::fpsTimer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>!&lt; 画面の更新頻度（FPS：Frames Per Second）を一定に保つ、または計測するために使用される </p>
+
+</div>
+</div>
+<a id="a2b866c4d3d96024593522c3f3faf4cdb" name="a2b866c4d3d96024593522c3f3faf4cdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b866c4d3d96024593522c3f3faf4cdb">&#9670;&#160;</a></span>frameCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long Timer::frameCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>プログラムやアニメーションの実行が始まってから、画面が更新 </p>
+
+</div>
+</div>
+<a id="ac8d9ba85523d93a2d4820dda9353d972" name="ac8d9ba85523d93a2d4820dda9353d972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8d9ba85523d93a2d4820dda9353d972">&#9670;&#160;</a></span>frameRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Timer::frameRate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>1秒間の動画が何枚の静止画（フレーム）で構成されているかを示す単位のこと </p>
+
+</div>
+</div>
+<a id="a751cd5f493eb73cab0d5b52fbdd83202" name="a751cd5f493eb73cab0d5b52fbdd83202"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a751cd5f493eb73cab0d5b52fbdd83202">&#9670;&#160;</a></span>previousTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">clock_t Timer::previousTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>「直前の時刻」や「1つ前のフレームの処理時刻」を保持するための変数 </p>
+
+</div>
+</div>
+<hr/>この構造体詳解は次のファイルから抽出されました:<ul>
+<li>Framework/03_Timer/<a class="el" href="_timer_8c.html">Timer.c</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="struct_timer.html">Timer</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

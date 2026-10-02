@@ -1,0 +1,121 @@
+\doxysection{Framework/\+01\+\_\+\+Application/\+\+Application.h ファイル}
+\hypertarget{_application_8h}{}\label{_application_8h}\index{Framework/01\_Application/Application.h@{Framework/01\_Application/Application.h}}
+
+
+Frameworkの核の部分  
+
+
+{\ttfamily \+\#include "{}../\+03\+\_\+\+Timer/\+\+Timer.\+h"{}}\newline
+\doxysubsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_application_8h_a7c242e92d50b4d36677fc11abe76b448}{CUSTOM\+\_\+\+ASSERT}}(parameter,  message)
+\begin{DoxyCompactList}\small\item\em 例外メッセージを表示しプログラムを一時停止させる \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_application_8h_a92b891115dcc3cdf33ffae1d76dd3e2d}\label{_application_8h_a92b891115dcc3cdf33ffae1d76dd3e2d} 
+typedef struct \doxymbox{\hyperlink{struct_application}{Application}} \texorpdfstring{$\ast$}{*} {\bfseries Ptr\+Application}
+\begin{DoxyCompactList}\small\item\em Applicationのポインタが持つ実体の参照用. \end{DoxyCompactList}\item 
+\Hypertarget{_application_8h_a39413cfc64bdb2ffa5bc05306327c9e1}\label{_application_8h_a39413cfc64bdb2ffa5bc05306327c9e1} 
+typedef struct \doxymbox{\hyperlink{struct_application}{Application}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries WPtr\+Application}
+\begin{DoxyCompactList}\small\item\em Applicationのポインタのポインタ。メモリ解放などで利用. \end{DoxyCompactList}\item 
+\Hypertarget{_application_8h_ac6fd57e2a0c7f130c6bdf894ba4b740a}\label{_application_8h_ac6fd57e2a0c7f130c6bdf894ba4b740a} 
+typedef struct \doxymbox{\hyperlink{struct_timer}{Timer}} \texorpdfstring{$\ast$}{*} {\bfseries Ptr\+Timer}
+\begin{DoxyCompactList}\small\item\em ゲーム内の時間管理のポインタ. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_application_8h_a90100562b864f71c4da8cff9adcdda37}\label{_application_8h_a90100562b864f71c4da8cff9adcdda37} 
+unsigned char {\bfseries application\+Noticed\+Is\+Running} (\doxymbox{\hyperlink{_application_8h_a92b891115dcc3cdf33ffae1d76dd3e2d}{Ptr\+Application}} \+\_\+ptr\+Application)
+\item 
+void \doxymbox{\hyperlink{_application_8h_a52bbc5bf33f708272c373bcb3a124be3}{application\+Initialize}} (\doxymbox{\hyperlink{_application_8h_a39413cfc64bdb2ffa5bc05306327c9e1}{WPtr\+Application}} \+\_\+wptr\+Application)
+\begin{DoxyCompactList}\small\item\em Applicationを初期化する \end{DoxyCompactList}\item 
+\Hypertarget{_application_8h_a639ba855e2125fa24478422f783f87fe}\label{_application_8h_a639ba855e2125fa24478422f783f87fe} 
+void {\bfseries application\+Run} (\doxymbox{\hyperlink{_application_8h_a92b891115dcc3cdf33ffae1d76dd3e2d}{Ptr\+Application}} \+\_\+ptr\+Application)
+\item 
+\Hypertarget{_application_8h_aec05968ba6bd4156cc4a512b02617420}\label{_application_8h_aec05968ba6bd4156cc4a512b02617420} 
+void {\bfseries application\+Shutdown} (\doxymbox{\hyperlink{_application_8h_a39413cfc64bdb2ffa5bc05306327c9e1}{WPtr\+Application}} \+\_\+wptr\+Application)
+\item 
+\Hypertarget{_application_8h_a2797f33570f2ec8a0449edd56c4dbc38}\label{_application_8h_a2797f33570f2ec8a0449edd56c4dbc38} 
+void {\bfseries application\+Notice\+Shutdown} (\doxymbox{\hyperlink{_application_8h_a92b891115dcc3cdf33ffae1d76dd3e2d}{Ptr\+Application}} \+\_\+ptr\+Application)
+\item 
+\Hypertarget{_application_8h_a32d391f32afd2090b171b3c9b0dcae6a}\label{_application_8h_a32d391f32afd2090b171b3c9b0dcae6a} 
+\doxymbox{\hyperlink{_timer_8h_a1a42431170135eaa687921a4b959b07b}{Ptr\+Game\+Timer}} {\bfseries get\+Game\+Timer} (const \doxymbox{\hyperlink{_application_8h_a92b891115dcc3cdf33ffae1d76dd3e2d}{Ptr\+Application}} \+\_\+cptr\+Application)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+Frameworkの核の部分 
+
+\begin{DoxyNote}{覚え書き}
+Applicationの実装はここでで実装 
+\end{DoxyNote}
+\begin{DoxyAuthor}{著者}
+Rasemu\+Creative 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2026-\/09-\/26 
+\end{DoxyDate}
+\begin{DoxyVersion}{バージョン}
+0.\+1.\+0
+\end{DoxyVersion}
+\begin{DoxyNote}{覚え書き}
+実装は\+Application.\+cで実装 
+\end{DoxyNote}
+\begin{DoxyAuthor}{著者}
+Rasemu\+Creative 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2026-\/09-\/26 
+\end{DoxyDate}
+\begin{DoxyVersion}{バージョン}
+0.\+1.\+0 
+\end{DoxyVersion}
+
+
+\label{_application_8h_doc-define-members}
+\Hypertarget{_application_8h_doc-define-members}
+\doxysubsection{マクロ定義詳解}
+\Hypertarget{_application_8h_a7c242e92d50b4d36677fc11abe76b448}\index{Application.h@{Application.h}!CUSTOM\_ASSERT@{CUSTOM\_ASSERT}}
+\index{CUSTOM\_ASSERT@{CUSTOM\_ASSERT}!Application.h@{Application.h}}
+\doxysubsubsection{\texorpdfstring{CUSTOM\_ASSERT}{CUSTOM\_ASSERT}}
+{\footnotesize\ttfamily \label{_application_8h_a7c242e92d50b4d36677fc11abe76b448} 
+\+\#define CUSTOM\+\_\+\+ASSERT(\begin{DoxyParamCaption}\item[{}]{parameter}{, }\item[{}]{message}{}\end{DoxyParamCaption})}
+
+{\bfseries 値:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{assert(!(parameter)\ ||\ \_\_FILE\_\_\ ||\ \_\_LINE\_\_\ ||\ (message))}
+
+\end{DoxyCode}
+
+
+例外メッセージを表示しプログラムを一時停止させる 
+
+
+\begin{DoxyParams}{引数}
+{\em parameter} & 例外対象の式または値 \\
+\hline
+{\em message} & 例外時のメッセージ \\
+\hline
+\end{DoxyParams}
+
+
+\label{_application_8h_doc-func-members}
+\Hypertarget{_application_8h_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{_application_8h_a52bbc5bf33f708272c373bcb3a124be3}\index{Application.h@{Application.h}!applicationInitialize@{applicationInitialize}}
+\index{applicationInitialize@{applicationInitialize}!Application.h@{Application.h}}
+\doxysubsubsection{\texorpdfstring{applicationInitialize()}{applicationInitialize()}}
+{\footnotesize\ttfamily \label{_application_8h_a52bbc5bf33f708272c373bcb3a124be3} 
+void application\+Initialize (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_application_8h_a39413cfc64bdb2ffa5bc05306327c9e1}{WPtr\+Application}}}]{\+\_\+wptr\+Application}{}\end{DoxyParamCaption})}
+
+
+
+Applicationを初期化する 
+
+
+\begin{DoxyParams}{引数}
+{\em \+\_\+wptr\+Application} & 初期化用ダブルポインタ \\
+\hline
+\end{DoxyParams}

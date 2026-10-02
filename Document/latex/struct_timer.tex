@@ -1,0 +1,87 @@
+\doxysection{Timer 構造体}
+\hypertarget{struct_timer}{}\label{struct_timer}\index{Timer@{Timer}}
+
+
+ゲーム時間の管理用構造体  
+
+
+\doxysubsubsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+double \doxymbox{\hyperlink{struct_timer_a1a391b2b02a45aa4220f8d466ae63237}{delta\+Time}}
+\item 
+double \doxymbox{\hyperlink{struct_timer_a5103133958f648833d91f18c109bfec0}{elapsed\+Time}}
+\item 
+double \doxymbox{\hyperlink{struct_timer_af1abe36d7bfee6fb2b58252c97e91dab}{fps}}
+\item 
+double \doxymbox{\hyperlink{struct_timer_ac8d9ba85523d93a2d4820dda9353d972}{frame\+Rate}}
+\item 
+unsigned long \doxymbox{\hyperlink{struct_timer_a2b866c4d3d96024593522c3f3faf4cdb}{frame\+Count}}
+\item 
+clock\+\_\+t \doxymbox{\hyperlink{struct_timer_a751cd5f493eb73cab0d5b52fbdd83202}{previous\+Time}}
+\item 
+clock\+\_\+t \doxymbox{\hyperlink{struct_timer_a9d0d6a42b00374b79e1ba41777c6bd35}{fps\+Timer}}
+\item 
+clock\+\_\+t \doxymbox{\hyperlink{struct_timer_a546f625b928a3f4f032c665d8e9b3e8f}{fps\+Elapsed}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+ゲーム時間の管理用構造体 
+
+\label{struct_timer_doc-variable-members}
+\Hypertarget{struct_timer_doc-variable-members}
+\doxysubsection{メンバ詳解}
+\Hypertarget{struct_timer_a1a391b2b02a45aa4220f8d466ae63237}\index{Timer@{Timer}!deltaTime@{deltaTime}}
+\index{deltaTime@{deltaTime}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{deltaTime}{deltaTime}}
+{\footnotesize\ttfamily \label{struct_timer_a1a391b2b02a45aa4220f8d466ae63237} 
+double Timer::\+delta\+Time}
+
+直前のフレームから現在のフレームまでに経過した時間（秒）のこと \Hypertarget{struct_timer_a5103133958f648833d91f18c109bfec0}\index{Timer@{Timer}!elapsedTime@{elapsedTime}}
+\index{elapsedTime@{elapsedTime}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{elapsedTime}{elapsedTime}}
+{\footnotesize\ttfamily \label{struct_timer_a5103133958f648833d91f18c109bfec0} 
+double Timer::\+elapsed\+Time}
+
+経過時間 \Hypertarget{struct_timer_af1abe36d7bfee6fb2b58252c97e91dab}\index{Timer@{Timer}!fps@{fps}}
+\index{fps@{fps}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{fps}{fps}}
+{\footnotesize\ttfamily \label{struct_timer_af1abe36d7bfee6fb2b58252c97e91dab} 
+double Timer::\+fps}
+
+1フレーム/\+秒 \Hypertarget{struct_timer_a546f625b928a3f4f032c665d8e9b3e8f}\index{Timer@{Timer}!fpsElapsed@{fpsElapsed}}
+\index{fpsElapsed@{fpsElapsed}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{fpsElapsed}{fpsElapsed}}
+{\footnotesize\ttfamily \label{struct_timer_a546f625b928a3f4f032c665d8e9b3e8f} 
+clock\+\_\+t Timer::\+fps\+Elapsed}
+
+「\+FPS（フレームレート）の計測や計算のために経過した時間」を保持する変数 \Hypertarget{struct_timer_a9d0d6a42b00374b79e1ba41777c6bd35}\index{Timer@{Timer}!fpsTimer@{fpsTimer}}
+\index{fpsTimer@{fpsTimer}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{fpsTimer}{fpsTimer}}
+{\footnotesize\ttfamily \label{struct_timer_a9d0d6a42b00374b79e1ba41777c6bd35} 
+clock\+\_\+t Timer::\+fps\+Timer}
+
+!\texorpdfstring{$<$}{<} 画面の更新頻度（\+FPS：\+Frames Per Second）を一定に保つ、または計測するために使用される \Hypertarget{struct_timer_a2b866c4d3d96024593522c3f3faf4cdb}\index{Timer@{Timer}!frameCount@{frameCount}}
+\index{frameCount@{frameCount}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{frameCount}{frameCount}}
+{\footnotesize\ttfamily \label{struct_timer_a2b866c4d3d96024593522c3f3faf4cdb} 
+unsigned long Timer::\+frame\+Count}
+
+プログラムやアニメーションの実行が始まってから、画面が更新 \Hypertarget{struct_timer_ac8d9ba85523d93a2d4820dda9353d972}\index{Timer@{Timer}!frameRate@{frameRate}}
+\index{frameRate@{frameRate}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{frameRate}{frameRate}}
+{\footnotesize\ttfamily \label{struct_timer_ac8d9ba85523d93a2d4820dda9353d972} 
+double Timer::\+frame\+Rate}
+
+1秒間の動画が何枚の静止画（フレーム）で構成されているかを示す単位のこと \Hypertarget{struct_timer_a751cd5f493eb73cab0d5b52fbdd83202}\index{Timer@{Timer}!previousTime@{previousTime}}
+\index{previousTime@{previousTime}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{previousTime}{previousTime}}
+{\footnotesize\ttfamily \label{struct_timer_a751cd5f493eb73cab0d5b52fbdd83202} 
+clock\+\_\+t Timer::\+previous\+Time}
+
+「直前の時刻」や「1つ前のフレームの処理時刻」を保持するための変数 
+
+この構造体詳解は次のファイルから抽出されました:\begin{DoxyCompactItemize}
+\item 
+Framework/\+03\+\_\+\+Timer/\doxymbox{\hyperlink{_timer_8c}{Timer.\+c}}\end{DoxyCompactItemize}
