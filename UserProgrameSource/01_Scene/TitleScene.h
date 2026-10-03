@@ -1,6 +1,7 @@
 #ifndef __TITLESCENE_H__
 #define __TITLESCENE_H__
 #include "../../Framework/04_Scene/Scene.h"
+#include "../../Framework/00_Common/Common.h"
 
 int titleInitialize(PtrSceneFunctions _ptrScene,void* _vptrUserData);
 PtrSceneFunctions titleUpdate(double _deltaTime, double _elapceTime);

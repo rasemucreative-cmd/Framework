@@ -14,6 +14,7 @@
 #include <assert.h>
 
 #include "Timer.h"
+#include "../00_Common/Common.h"
 #include "../01_Application/Application.h"
 
 /**
@@ -68,11 +69,12 @@ void initializeGameTimer(PtrGameTimer _ptrTimer){
 
 PtrGameTimer createGameTimer()
 {
-    CUSTOM_ASSERT(time != NULL,"このポインタはすでにアドレスを保持しています。");
-    PtrGameTimer time = malloc(sizeof(struct Timer));
-    CUSTOM_ASSERT(time == NULL,"timeの生成に失敗しました。");
-    initializeGameTimer(time);
-    return time;
+    PtrGameTimer ptrTime = NULL;
+    CUSTOM_ASSERT(ptrTime != NULL,"このポインタはすでにアドレスを保持しています。");
+    ptrTime = malloc(sizeof(struct Timer));
+    CUSTOM_ASSERT(ptrTime == NULL,"ptrTimeの生成に失敗しました。");
+    initializeGameTimer(ptrTime);
+    return ptrTime;
 }
 
 void deleteGameTimer(WPtrGameTimer _wptrTimer){

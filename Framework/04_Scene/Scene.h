@@ -62,7 +62,7 @@ PtrSceneFunctions SceneUpdate(PtrSceneFunctions,double,double);
  * @param[in] void* SceneFunctionsが持つユーザーデータ
  * @return int (0:成功/0以外：失敗)
  */
-int SceneInitialize(WPtrSceneFunctions,void*);
+int SceneInitialize(WPtrSceneFunctions);
 
 /**
  * @brief SceneFunctionsが持つ解放処理関数を呼び出し自身の構造体の内容を削除する

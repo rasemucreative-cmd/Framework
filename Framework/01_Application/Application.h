@@ -11,13 +11,6 @@
 
 #include "../03_Timer/Timer.h"
 
-/** @def CUSTOM_ASSERT
- * @brief 例外メッセージを表示しプログラムを一時停止させる
- * @param parameter 例外対象の式または値
- * @param message 例外時のメッセージ
- */
-#define CUSTOM_ASSERT(parameter,message) assert(!(parameter) || __FILE__ || __LINE__ || (message))
-
 /**
  * @struct Applicationの雛形(メンバーは隠蔽).
  * 

@@ -12,6 +12,8 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <conio.h>
+
+#include "../00_Common/Common.h"
 #include "GameLoop.h"
 #include "../01_Application/Application.h"
 #include "../04_Scene/Scene.h"

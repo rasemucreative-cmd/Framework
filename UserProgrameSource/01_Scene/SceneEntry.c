@@ -14,13 +14,11 @@
 
 #include <stdlib.h>
 
-#include "../../Framework/00_Common/DebugTool.h"
+#include "../../Framework/00_Common/Common.h"
 #include "../../Framework/04_Scene/Scene.h"
 #include "TitleScene.h"
 
-#define LIST_COUNT (3)
-
-int SceneInitialize(PtrSceneFunctions* _wptrSceneFunctions,void* _vptrUserData){
+int SceneInitialize(WPtrSceneFunctions _wptrSceneFunctions){
 
     *_wptrSceneFunctions = malloc(sizeof(struct Functions));
     CUSTOM_ASSERT((*_wptrSceneFunctions) == NULL, "SceneFunctionsの生成に失敗しました");
@@ -28,8 +26,9 @@ int SceneInitialize(PtrSceneFunctions* _wptrSceneFunctions,void* _vptrUserData){
     (*_wptrSceneFunctions)->update = titleUpdate;
     (*_wptrSceneFunctions)->exit = titleExit;
     (*_wptrSceneFunctions)->vprtUserData = NULL;
+    int result = (*_wptrSceneFunctions)->initialize(*_wptrSceneFunctions,NULL);
 
-    return 0;
+    return result;
 }
 
 PtrSceneFunctions SceneUpdate(PtrSceneFunctions _ptrSceneFunctions, double _deltaTime, double _elapcedTime)

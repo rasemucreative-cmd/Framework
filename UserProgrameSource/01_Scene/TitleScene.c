@@ -3,6 +3,8 @@
 
 int titleInitialize(PtrSceneFunctions _ptrScene, void *_vptrUserData)
 {
+    TYPE_DATA_CREATE(int*,testInt,testData);
+
     printf("Titleの初期化です。\n");
     return 0;
 }

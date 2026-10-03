@@ -4,6 +4,14 @@
  * @brief データを安全に変換するためのマクロ関数や変換関数です
  * @version 0.1
  * @date 2026-10-01
+ * @par 変更履歴:
+ *     - 2026-10-01: 新規作成
+ *     - 2026-10-02: convertEndian関数の実装
+ *     - 2026-10-03: TYPE_DATA_INITIALIZEマクロの実装
+ *     - 2026-10-04: SAFE_CASTマクロの実装
+ *                   TYPE_IDマクロの実装
+ *                   STRINGFYマクロの実装
+ *                   convertEndian関数の修正
  * 
  * @copyright Copyright (c) 2026
  * 
@@ -12,8 +20,8 @@
 #define __CASTDEFINES_H__
 
 /**
- * @brief ユーザーが定義した情報をvoid*にアドレスを格納し型の名前から
- * 　　　　変換した識別用IDをキャスト時に使います
+ * @brief - ユーザーが定義した情報をvoid*にアドレスを格納し型の名前から
+ * 　　　　  変換した識別用IDをキャスト時に使います
  * 
  */
 typedef struct {
@@ -34,6 +42,9 @@ unsigned long long convertEndian(
     unsigned char src[], 
     unsigned long long srcSize
 );
+
+void* SafeMalloc(unsigned long long _size, const char* _cptrFile, const int _line);
+void SafeFree(void **_wptr);
 
 /**
  * @brief Xに格納されたものを文字列に置き換えます
@@ -60,7 +71,19 @@ default: 0)
  */
 #define TYPE_DATA_INITIALIZE(userType,userData,dataName, ...)\
     ((userData) = (userType){__VA_ARGS__});\
-    TypeData dataName = { TYPE_ID(userType), (void*)(&userData) };
+    TypeData dataName = { 0, TYPE_ID(userType), (void*)(&userData) };
+
+/**
+ * @brief ユーザー定義されたデータ型を動的に確保
+ * @param[in] userType ユーザー定義の型の名前に置き換える
+ * @param[in] userData ユーザー定義の変数の名前に置き換える
+ * @param[in] dataName TypeDataの変数名に置き換える
+ * 
+ */
+#define TYPE_DATA_CREATE(userType,userData,dataName)\
+    userType* userData = \
+    SafeMalloc(sizeof(userType),__FILE__,__LINE__);\
+    TypeData dataName = { 0, (void*)(userData) };
 
 /**
  * @brief 安全に型の変換をするためのマクロ
@@ -69,7 +92,7 @@ default: 0)
  */
 #define SAFE_CAST(type,typeID,typedData)\
 ((TYPE_ID(type) == (typeID)) ? \
-    (type*)((typedData)) : NULL)
+    (type*)((typedData).this) : NULL)
 
 
 #endif /* __CASTDEFINES_H__ */

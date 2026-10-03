@@ -24,13 +24,6 @@
  * 
  */
 
- /**
- * @def CUSTOM_ASSERT(parameter,message)
- * @brief parameterの値が不正であればmessageを表示しプログラムに例外を渡す.
- * 
- */
-#define CUSTOM_ASSERT(parameter,message) assert(!(parameter) || __FILE__ || __LINE__ || (message))
-
 /**
  * @struct Application
  * @brief ゲーム内時間とゲームループの通知保持
